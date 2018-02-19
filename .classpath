@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="/home/monirul/Videos/selenium-java-3.6.0/libs/commons-exec-1.3.jar"/>
 	<classpathentry kind="lib" path="/home/monirul/Videos/selenium-java-3.6.0/libs/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="/home/monirul/Videos/selenium-java-3.6.0/libs/byte-buddy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="/home/monirul/Downloads/sikulixapi.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
