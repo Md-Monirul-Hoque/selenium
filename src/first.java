@@ -1,7 +1,9 @@
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,7 +46,7 @@ public class first {
 				
 					}
 			
-		}
+		}   */
 			
 		
 
@@ -54,6 +56,7 @@ public class first {
 		
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		driver.switchTo().frame(0);
+		driver.switchTo().activeElement();
 		
 		WebElement drag=driver.findElement(By.id("draggable"));
 		WebElement drop=driver.findElement(By.id("droppable"));
@@ -74,6 +77,9 @@ public class first {
 	   
 	   Thread.sleep(3000);
 	   
+	   JavascriptExecutor js = (JavascriptExecutor) driver;
+	   js.executeScript("alert('I am alertbox')");
+	   
 	   
 	   WebElement item1=driver.findElement(By.xpath("//*[@id='sortable']/li[1]"));
 	   WebElement item2=driver.findElement(By.xpath("//*[@id='sortable']/li[4]"));
@@ -82,7 +88,7 @@ public class first {
 		action.dragAndDrop(item1, item2).perform();
 		action.clickAndHold(item1).moveToElement(item2).release(item1).build().perform();
 		
-		Thread.sleep(3000);   */
+		Thread.sleep(3000);   
 		
 		
 	   driver.get("http://automationpractice.com/index.php");
